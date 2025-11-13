@@ -1,4 +1,4 @@
-// 1. Segregated Interfaces (ISP - Interface Segregation Principle)
+
 interface Workable {
     void work();
 }
@@ -11,7 +11,7 @@ interface Payable {
     void getPaid();
 }
 
-// 2. HumanWorker implements all relevant interfaces
+
 class HumanWorker implements Workable, Feedable, Payable {
     @Override
     public void work() {
@@ -29,7 +29,7 @@ class HumanWorker implements Workable, Feedable, Payable {
     }
 }
 
-// 3. RobotWorker implements only needed interfaces
+
 class RobotWorker implements Workable, Payable {
     @Override
     public void work() {
@@ -42,7 +42,7 @@ class RobotWorker implements Workable, Payable {
     }
 }
 
-// 4. Client Test Class
+
 public class ISPTest {
     public static void manageWork(Workable w) {
         w.work();
@@ -59,6 +59,7 @@ public class ISPTest {
         manageWork(human);
         manageWork(robot);
         manageLunch(human);
-        // manageLunch(robot); // ERROR if uncommented — Robot doesn’t eat
+        
     }
 }
+
