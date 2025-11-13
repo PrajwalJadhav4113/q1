@@ -1,4 +1,4 @@
-// Student.java - Data Holder
+
 class Student {
     private int rollNo;
     private String name;
@@ -11,7 +11,7 @@ class Student {
     }
 
     public double getMarks() { return marks; }
-    public String getName() { return name; } // Needed for StudentRepository
+    public String getName() { return name; }
 
     @Override
     public String toString() {
@@ -19,7 +19,7 @@ class Student {
     }
 }
 
-// GradeCalculator.java - Grading Logic
+
 class GradeCalculator {
     public String calculateGrade(Student student) {
         double m = student.getMarks();
@@ -29,14 +29,14 @@ class GradeCalculator {
     }
 }
 
-// StudentRepository.java - Persistence Logic
+
 class StudentRepository {
     public void save(Student student) {
         System.out.println("SAVED: " + student.getName() + " record to file successfully.");
     }
 }
 
-// Client Test
+
 public class SRPTest {
     public static void main(String[] args) {
         Student s1 = new Student(101, "Amit Sharma", 82.5);
@@ -49,3 +49,4 @@ public class SRPTest {
         repo.save(s1);
     }
 }
+
